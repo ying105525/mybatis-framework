@@ -1,6 +1,7 @@
 package com.ying.mybatis.sqlsession.impl;
 
 import com.ying.mybatis.mapping.Configuration;
+import com.ying.mybatis.sqlsession.DefaultSqlSession;
 import com.ying.mybatis.sqlsession.SqlSession;
 import com.ying.mybatis.sqlsession.SqlSessionFactory;
 
@@ -21,6 +22,6 @@ public class DefaultSqlSessionFactory implements SqlSessionFactory {
 
     @Override
     public SqlSession openSqlSession() {
-        return null;
+        return new DefaultSqlSession(configuration);
     }
 }
